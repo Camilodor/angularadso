@@ -9,5 +9,10 @@ import { HijoComponent } from "../usuarios/hijo/hijo.component";
   styleUrl: './padre.component.css'
 })
 export class PadreComponent {
+  //mensajepadre = "hola hijo"
+  mensajecibido: String = '';
 
+  recibirMensaje($event: String) {
+    this.mensajecibido = $event
+  }
 }

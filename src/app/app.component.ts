@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { NavComponent } from "./nav/nav.component";
 import { CuerpoComponent } from "./cuerpo/cuerpo.component";
 import { FooterComponent } from "./footer/footer.component";
+import { HeaderComponent } from './header/header.component';
+import { NavComponent } from "./nav/nav.component";
 
 
 @Component({
@@ -14,7 +14,6 @@ import { FooterComponent } from "./footer/footer.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angularadsonoche Gol Colombia';
-  subtitulo = 'Quintero'
+  title = 'Curso Angular ADSO-SENA Nocturno';
 
 }
