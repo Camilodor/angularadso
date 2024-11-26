@@ -9,14 +9,7 @@ import { PadreComponent } from '../padre/padre.component';
   styleUrl: './cuerpo.component.css'
 })
 export class CuerpoComponent {
-  valor = 0;
 
-  incrementar() {
-    this.valor++;
-  }
 
-  disminuir() {
-    this.valor--;
-  }
 
 }
