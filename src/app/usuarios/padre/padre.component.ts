@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HijoComponent } from "../usuarios/hijo/hijo.component";
+import { HijoComponent } from "../hijo/hijo.component";
 
 @Component({
   selector: 'app-padre',
@@ -15,6 +15,7 @@ export class PadreComponent {
 
   recibirMensaje($event: String) {
     this.mensajecibido = $event
+
   }
 
    incrementar() {

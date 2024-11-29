@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { PadreComponent } from '../padre/padre.component';
+import { RouterLink } from '@angular/router';
+import { PadreComponent } from "../usuarios/padre/padre.component";
 
 @Component({
   selector: 'app-cuerpo',
   standalone: true,
-  imports: [PadreComponent],
+  imports: [RouterLink, PadreComponent],
   templateUrl: './cuerpo.component.html',
   styleUrl: './cuerpo.component.css'
 })
