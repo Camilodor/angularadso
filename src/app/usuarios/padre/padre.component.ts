@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { HijoComponent } from "../hijo/hijo.component";
+import { routes } from '../../app.routes';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-padre',
   standalone: true,
-  imports: [HijoComponent],
+  imports: [HijoComponent,RouterOutlet],
   templateUrl: './padre.component.html',
   styleUrl: './padre.component.css'
 })
