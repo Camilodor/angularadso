@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2 class="text-center">Gestión de Subcategorías</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID Subcategoría</th>
+          <th>Nombre</th>
+          <th>ID Categoría</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let subcategoria of subcategorias">
+          <td>{{ subcategoria.id_subcategoria }}</td>
+          <td>{{ subcategoria.nombre }}</td>
+          <td>{{ subcategoria.id_categoria }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="editarSubcategoria(subcategoria.id_subcategoria)">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarSubcategoria(subcategoria.id_subcategoria)">Eliminar</button>
+            <button class="btn btn-info" (click)="consultarSubcategoria(subcategoria.id_subcategoria)">Consultar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-success">Crear Subcategoría</button>
+      <button class="btn btn-primary">Guardar</button>
+    </div>
+  </div>

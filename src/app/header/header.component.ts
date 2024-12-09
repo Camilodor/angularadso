@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { NavComponent } from '../nav/nav.component';
+import { NavgoComponent } from '../navgo/navgo.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NavComponent],
+  imports: [NavgoComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

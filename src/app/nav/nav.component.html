@@ -1,51 +1,63 @@
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="">ADSO-NOCHE</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand" routerLink="">Sox</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['pagina']"
-          routerLinkActive="router-link-active">Home</a>
+          <a class="nav-link active" aria-current="page" >Login</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            [routerLink]="['padre']"
-            routerLinkActive="router-link-active"
-            >Padre</a
-          >
+          <a class="nav-link" >Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/usuarios']" routerLinkActive="router-link-active">Usuarios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Hijo</a>
+          <a class="nav-link" [routerLink]="['/categorias']" routerLinkActive="router-link-active">Categorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/subcategorias']" routerLinkActive="router-link-active">Subcategorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/mercancia']" routerLinkActive="router-link-active">Mercancia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Despacho</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Vehiculos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Entregas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Devoluciones</a>
         </li>
         <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            listado Submenu
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Categorias</a></li>
+            <li><a class="dropdown-item" href="#">Subcategorias</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">mercancia</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
       </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+   
     </div>
   </div>
 </nav>

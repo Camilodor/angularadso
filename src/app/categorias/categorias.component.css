@@ -1,0 +1,13 @@
+.table-responsive {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  table th, table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  button {
+    margin: 0 5px;
+  }

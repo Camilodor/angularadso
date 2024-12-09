@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2 class="text-center">Gestión de Usuarios</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Imagen</th> <!-- Nueva columna para la imagen -->
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Rol</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>
+            <img src="imagenes/icono usuario.avif" alt="Usuario" width="30" height="30" />
+          </td>
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.telefono }}</td>
+          <td>{{ usuario.rol }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="editarUsuario(usuario.id)">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+            <button class="btn btn-info" (click)="consultarUsuario(usuario.id)">Consultar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-success">Crear Usuario</button>
+      <button class="btn btn-primary">Guardar</button>
+    </div>
+  </div>

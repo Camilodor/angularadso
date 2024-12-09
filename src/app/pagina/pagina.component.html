@@ -1,52 +1,29 @@
-<p>pagina works!</p>
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://concepto.de/wp-content/uploads/2019/05/desarrollo-2-e1557696833760.jpg" class="d-block w-100" width="100%" height="480px">
+<div class="background">
+  <!-- Sección izquierda -->
+  <div class="container-fluid d-flex flex-row vh-100">
+      <!-- División izquierda -->
+      <div class="left-section d-flex align-items-center justify-content-center w-50">
+          <img src="assets/imghttps://file+.vscode-resource.vscode-cdn.net/c%3A/Users/duvan/sox_proyect/src/assets/img/2.png?version%3D1733141882447/2.png" alt="SOX Logo" />
+      </div>
+    
+      <!-- División derecha -->
+      <div class="right-section d-flex align-items-center justify-content-center w-50">
+        <div class="login-box text-center">
+          <h1>Sox</h1>
+          <h2>Inicio de Sesión</h2>
+          <div class="form-group">
+              <label for="username"></label>
+              <input type="text" id="username" class="form-control" placeholder="Usuario" />
+            </div>
+            <div class="form-group">
+              <label for="password"></label>
+              <input type="password" id="password" class="form-control" placeholder="Contraseña" />
+            </div>
+            <button class="btn btn-primary mt-3" [routerLink]="['/login']" routerLinkActive="router-link-active" >Ingresar</button>
+          <!-- Aquí puedes añadir el formulario -->
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://blogs.evaluar.com/hs-fs/hub/398634/file-1375084468-jpg/images/desarrollo-profesional-blog-evaluar.jpg" class="d-block w-100" width="100%" height="480px">
-    </div>
-    <div class="carousel-item">
-      <img src="https://b3278403.smushcdn.com/3278403/wp-content/uploads/2023/07/empresario-usando-tableta-analizando-datos-ventas-grafico-crecimiento-economico-scaled.jpg?lossy=2&strip=1&webp=1" class="d-block w-100" width="100%" height="480px" >
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>twitter</td>
-    </tr>
-  </tbody>
-</table>
+      </div>
+ 
 

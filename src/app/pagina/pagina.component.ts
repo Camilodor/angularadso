@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-pagina',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './pagina.component.html',
   styleUrl: './pagina.component.css'
 })

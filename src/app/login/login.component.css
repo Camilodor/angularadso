@@ -1,0 +1,59 @@
+
+.card {
+    min-height: 100px; /* Ajusta este valor según sea necesario */
+    background-color: #8a989c;
+  }
+
+  .usuario-card {
+    min-height: 300px; /* Ajusta la altura mínima según lo necesites */
+    
+  }
+  
+  .alertas-card {
+    min-height: 300px; /* Ajusta la altura mínima según lo necesites */
+  }
+  .mercancia-card{
+    min-height: 10px; /* Ajusta la altura mínima según lo necesites */
+  }
+  .despacho-card{
+    min-height: 10px; /* Ajusta la altura mínima según lo necesites */
+  }
+  .devoluciones-card{
+    min-height: 10px; /* Ajusta la altura mínima según lo necesites */
+  }
+  .quienessomos-card{
+    min-height: 10px; /* Ajusta la altura mínima según lo necesites */
+  }
+  .btn-light-blue {
+    background-color: #add8e6; /* Color azul claro */
+    color: #ffffff; /* Color del texto */
+    border: 2px solid #000000; /* Borde negro */
+  }
+  
+  .btn-light-blue:hover {
+    background-color: #87ceeb; /* Color azul más oscuro al pasar el mouse */
+  }
+  
+  .btn-dark-gray {
+    background-color: #343a40; /* Color gris oscuro */
+    color: #ffffff; /* Color del texto */
+    border: 2px solid #000000; /* Borde negro */
+  }
+  
+  .btn-dark-gray:hover {
+    background-color: #495057; /* Color gris más claro al pasar el mouse */
+  }
+  .custom-icon {
+    font-size: 150px; /* Ajusta este valor al tamaño que desees */
+  }
+  .alertas-card {
+    background-color: #343a40; /* Color gris oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde para parecer un botón */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+.alertas-card:hover {
+    background-color: #495057; /* Color más claro al pasar el mouse */
+}
