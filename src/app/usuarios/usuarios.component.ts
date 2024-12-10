@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
+import { NavusuariosComponent } from '../navusuarios/navusuarios.component';
 
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,NavusuariosComponent],
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css'],
 })
@@ -21,6 +22,19 @@ export class UsuariosComponent {
     { id: 9, nombre: 'Diego Torres', telefono: '556677889', rol: 'Conductor' },
     { id: 10, nombre: 'Lucía Castro', telefono: '443322110', rol: 'Administrador' }
   ];
+  usuarioSeleccionado: any = {};
+
+  abrirFormularioEditar(usuario: any) {
+    this.usuarioSeleccionado = { ...usuario }; // Copiar el usuario seleccionado
+  }
+
+  crearUsuario() {
+    alert('Crear Usuario: Función aún no implementada.');
+  }
+
+  guardarCambios() {
+    alert('Guardar Cambios: Función aún no implementada.');
+  }
 
   eliminarUsuario(id: number) {
     alert(`Usuario con ID: ${id} eliminado`);

@@ -1,17 +1,17 @@
+<app-navusuarios/>
 <div class="container mt-5">
-    <h2 class="text-center">Gestión de Usuarios</h2>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Imagen</th> <!-- Nueva columna para la imagen -->
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Teléfono</th>
-          <th>Rol</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
+  <table class="table table-bordered table-striped tabla-estilizada">
+    <thead>
+      <tr>
+        <th>Imagen</th> <!-- Nueva columna para la imagen -->
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
         <tr *ngFor="let usuario of usuarios">
           <td>
             <img src="imagenes/icono usuario.avif" alt="Usuario" width="30" height="30" />
@@ -21,15 +21,93 @@
           <td>{{ usuario.telefono }}</td>
           <td>{{ usuario.rol }}</td>
           <td>
-            <button class="btn btn-warning" (click)="editarUsuario(usuario.id)">Editar</button>
-            <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id)">Eliminar</button>
-            <button class="btn btn-info" (click)="consultarUsuario(usuario.id)">Consultar</button>
+            <button
+            class="btn btn-warning me-2"
+            data-bs-toggle="modal"
+            data-bs-target="#editModal"
+            (click)="abrirFormularioEditar(usuario)"
+          >
+            <i class="fa fa-pencil-alt"></i>
+          </button>
+
+            <button class="btn btn-danger me-2" (click)="eliminarUsuario(usuario.id)">
+              <i class="fa fa-trash"></i>
+            </button>
+            <button class="btn btn-info" (click)="consultarUsuario(usuario.id)">
+              <i class="fa fa-eye"></i>
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
-    <div class="d-flex justify-content-between">
-      <button class="btn btn-success">Crear Usuario</button>
-      <button class="btn btn-primary">Guardar</button>
+    <div class="d-flex justify-content-center gap-3 mt-3">
+      <button class="btn btn-custom" (click)="crearUsuario()">Crear Usuario</button>
+      <button class="btn btn-custom" (click)="guardarCambios()">Guardar</button>
     </div>
   </div>
+  <div
+  class="modal fade"
+  id="editModal"
+  tabindex="-1"
+  aria-labelledby="editModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Editar Usuario</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="editNombre" class="form-label">Editar Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="editNombre"
+              [value]="usuarioSeleccionado.nombre"
+              readonly
+            />
+          </div>
+          <div class="mb-3">
+            <label for="editTelefono" class="form-label">Editar Teléfono</label>
+            <input
+              type="text"
+              class="form-control"
+              id="editTelefono"
+              [value]="usuarioSeleccionado.telefono"
+              readonly
+            />
+          </div>
+          <div class="mb-3">
+            <label for="editRol" class="form-label">Editar Rol</label>
+            <select
+              class="form-select"
+              id="editRol"
+              [value]="usuarioSeleccionado.rol"
+              disabled
+            >
+              <option value="Administrador">Administrador</option>
+              <option value="Bodeguero">Bodeguero</option>
+              <option value="Conductor">Conductor</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          Guardar Cambios
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

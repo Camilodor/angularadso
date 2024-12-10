@@ -11,3 +11,31 @@
   button {
     margin: 0 5px;
   }
+  /* Estilo para los botones centrados y de color negro */
+.btn-custom {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #444; /* Color más claro al pasar el ratón */
+}
+.tabla-estilizada thead tr th {
+  background-color: #343a40; /* Gris oscuro */
+  color: white; /* Texto blanco */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  text-align: center; /* Centrar el texto */
+}
+
+.tabla-estilizada th, .tabla-estilizada td {
+  vertical-align: middle;
+}
+
+.tabla-estilizada td {
+  text-align: center;
+}
